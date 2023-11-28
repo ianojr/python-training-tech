@@ -68,3 +68,16 @@ nhdf = gross_salary * 0.015
 print(nhdf)
 
 # 18
+taxable_income = gross_salary - (nssf+nhdf)
+print(taxable_income)
+
+#19
+relief =24000
+if taxable_income <= 24000:
+    payee = (taxable_income*0.1)-relief
+elif (taxable_income > 24000 and taxable_income <= 32333):
+    payee == ((24000*0.1)+(8333*0.25)+((taxable_income-32333)*0.3))-relief
+print(payee)
+
+# 20
+net_salary =gross_salary - (nhif + nhdf + nssf + payee)
